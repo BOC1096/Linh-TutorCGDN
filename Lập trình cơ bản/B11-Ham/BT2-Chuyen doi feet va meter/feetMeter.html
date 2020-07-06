@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function meterToFeet(meter) {
+            return 3.279 * meter;
+        }
+
+        function feetToMeter(feet) {
+            return 0.305 * feet;
+        }
+
+        let foot = prompt("Phap vao feet: ");
+        let meter = prompt("Nhap vao meter: ");
+        document.writeln("Feet -> meter: " + feetToMeter(foot) + "<br>");
+        document.writeln("Meter -> feet: " + meterToFeet(meter) + "<br>");
+    </script>
+</body>
+
+</html>

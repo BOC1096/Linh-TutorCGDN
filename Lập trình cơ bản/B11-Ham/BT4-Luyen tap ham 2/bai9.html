@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * ham kiem tra ki tu co trong mang, neu co hien thi so lan xuat hien, khong hien -1
+     * @param arr
+     * @param c
+     * @returns {number}
+     */
+    function checkCharacter(arr, c) {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == c) {
+                dem++
+            }
+        }
+        if (dem === 0) {
+            return -1;
+        }
+        return dem;
+
+    }
+
+    let array = ["d", "o", "a", "n", "n", "g", "o", "c", "l", "i", "n", "h"];
+    let char = prompt("enter character want check");
+    alert("ki tu xuat hien " + checkCharacter(array, char) + " lan");
+</script>
+</body>
+</html>

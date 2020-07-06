@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+
+<body>
+    <div id="frame" class="frame">
+        <div onclick="changeRow1()" id="row1" class="row1"></div>
+        <div onclick="changeRow2()" id="row2" class="row2"></div>
+        <div onclick="changeRow3()" id="row3" class="row3"></div>
+        <div onclick="changeRow4()" id="row4" class="row4"></div>
+        <div onclick="changeRow5()" id="row5" class="row5"></div>
+    </div>
+
+
+    <script>
+        let image1 = 'c';
+        let image2 = 'a';
+        let image3 = 'b';
+        let image4 = 'a';
+        let image5 = 'c';
+        let frame = document.getElementById('frame');
+        frame.style.backgroundColor = 'white';
+        frame.style.boxShadow = 'white';
+
+        function changeRow1() {
+            let row1 = document.getElementById('row1');
+            if (image1 == 'a') {
+                row1.style.backgroundImage = 'url(./image/b1.jpg)';
+                image1 = 'b';
+            } else if (image1 == 'b') {
+                row1.style.backgroundImage = 'url(./image/c1.jpg)';
+                image1 = 'c';
+            } else {
+                row1.style.backgroundImage = 'url(./image/a1.jpg)';
+                image1 = 'a';
+            }
+            passCheck();
+        }
+
+        function changeRow2() {
+            let row2 = document.getElementById('row2');
+            if (image2 == 'a') {
+                row2.style.backgroundImage = 'url(./image/b2.jpg)';
+                image2 = 'b';
+            } else if (image2 == 'b') {
+                row2.style.backgroundImage = 'url(./image/c2.jpg)';
+                image2 = 'c';
+            } else {
+                row2.style.backgroundImage = 'url(./image/a2.jpg)';
+                image2 = 'a';
+            }
+            passCheck();
+        }
+
+
+        function changeRow3() {
+            let row3 = document.getElementById('row3');
+            if (image3 == 'a') {
+                row3.style.backgroundImage = 'url(./image/b3.jpg)';
+                image3 = 'b';
+            } else if (image3 == 'b') {
+                row3.style.backgroundImage = 'url(./image/c3.jpg)';
+                image3 = 'c';
+            } else {
+                row3.style.backgroundImage = 'url(./image/a3.jpg)';
+                image3 = 'a';
+            }
+            passCheck();
+        }
+
+
+        function changeRow4() {
+            let row4 = document.getElementById('row4');
+            if (image4 == 'a') {
+                row4.style.backgroundImage = 'url(./image/b4.jpg)';
+                image4 = 'b';
+            } else if (image4 == 'b') {
+                row4.style.backgroundImage = 'url(./image/c4.jpg)';
+                image4 = 'c';
+            } else {
+                row4.style.backgroundImage = 'url(./image/a4.jpg)';
+                image4 = 'a';
+            }
+            passCheck();
+        }
+
+
+        function changeRow5() {
+            let row5 = document.getElementById('row5');
+            if (image5 == 'a') {
+                row5.style.backgroundImage = 'url(./image/b5.jpg)';
+                image5 = 'b';
+            } else if (image5 == 'b') {
+                row5.style.backgroundImage = 'url(./image/c5.jpg)';
+                image5 = 'c';
+            } else {
+                row5.style.backgroundImage = 'url(./image/a5.jpg)';
+                image5 = 'a';
+            }
+            passCheck();
+        }
+
+        function passCheck() {
+            if (image1 == image2 && image2 == image3 && image3 == image4 && image4 == image5) {
+                frame = document.getElementById('frame');
+                frame.style.backgroundColor = 'red';
+                frame.style.boxShadow = '5px 5px 5px red';
+            }
+        }
+    </script>
+</body>
+
+</html>

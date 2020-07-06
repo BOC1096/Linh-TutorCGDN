@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //bai4:Viết một chương trình để đếm số từ trong một chuỗi
+        let sentence = prompt("Nhap vao mot cau:");
+        let sentenceArr = sentence.split(" ");
+        let count = 0;
+
+        for (let i in sentenceArr) {
+            if (sentenceArr[i].trim().length > 0) {
+                count++;
+            }
+        }
+
+        document.write("So tu la: " + count);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+BEGIN
+    INPUT a1,a2,...,an
+    a1=max
+    i=2
+    for(i<=2)
+    IF ai>max
+        ai=max
+        i++
+    ELSE
+        i++
+    END IF
+    DISPLAY max
+END

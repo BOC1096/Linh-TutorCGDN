@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //bai6 : Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+
+        let arrayInteger = new Array(10);
+        for (let i = 0; i < arrayInteger.length; i++) {
+            arrayInteger[i] = prompt("Please input element " + i + ": ");
+        }
+
+        let numberV = prompt("Please input V: ");
+
+        if (arrayInteger.indexOf(numberV) >= 0) {
+            document.write("V is in the array");
+        } else {
+            document.write("V is not in the array");
+        }
+    </script>
+</body>
+
+</html>

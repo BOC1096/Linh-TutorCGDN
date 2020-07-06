@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let deposit = parseFloat(prompt("Nhap vao so tien muon: "));
+        let month = parseInt(prompt("Nhap vao so thamg: "));
+        let interestMoney = 0;
+        if (deposit < 10000000) {
+            interestMoney = deposit * (5 / 100) / month;
+        } else {
+            if (deposit < 20000000) {
+                interestMoney = deposit * (10 / 100) / month;
+            } else {
+                interestMoney = deposit * (20 / 100) / month;
+            }
+        }
+        document.write("Interest money: " + interestMoney);
+    </script>
+</body>
+
+</html>

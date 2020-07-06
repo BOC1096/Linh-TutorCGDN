@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là
+        // a,b,c > 0
+        // a + b > c
+        // b + c > a
+        // a + c > b
+
+        let a = parseFloat(prompt("Nhap vao a: "));
+        let b = parseFloat(prompt("Nhap vao b: "));
+        let c = parseFloat(prompt("Nhap vao c: "));
+
+        if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b) {
+            document.write(a + ", " + b + ", " + c + " la canh cua tam giac");
+        } else {
+            document.write(a + ", " + b + ", " + c + " khong phai la canh cua tam giac");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * ham tinh dien tich hinh tron
+     * @param n
+     * @returns {number}
+     **/
+    function acreage(n) {
+        let total;
+        n = parseFloat(n);
+        total = n * n * 3.14;
+        return total;
+    }
+
+    /**
+     * ham tinh chu vi hinh tron
+     * @param n
+     * @returns {number}
+     **/
+    function perimeter(n) {
+        let total;
+        n = parseFloat(n);
+        total = n * 2 * 3.14;
+        return total;
+    }
+
+    // nhap vao ban kinh
+    let radius = prompt("enter radius: ");
+    let s = acreage(radius);
+    alert("S: "+s);
+    let c = perimeter(radius);
+    alert("C: "+c);
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p1>CACULATOR</p1>
+    <form>
+        <input id="number1" type="text" />
+        <input id="number2" type="text" />
+        <button type="button" onclick="addi()" value="addition">addition</button>
+        <button type="button" onclick="subtra()" value="subtraction">subtraction</button>
+        <button type="button" onclick="multi()" value="multiplication">multiplication</button>
+        <button type="button" onclick="divi()" value="division">division</button>
+        <p id="result"></p>
+    </form>
+    <script>
+        let a = document.getElementById("number1");
+        let b = document.getElementById("number2");
+        let c = 0;
+
+        function addi() {
+            c = (parseInt(a.value) + parseInt(b.value));
+            document.getElementById("result").innerText = c;
+        }
+
+        function subtra() {
+            c = (parseInt(a.value) - parseInt(b.value));
+            document.getElementById("result").innerText = c;
+        }
+
+        function multi() {
+            c = (parseInt(a.value) * parseInt(b.value));
+            document.getElementById("result").innerText = c;
+        }
+
+        function divi() {
+            c = (parseInt(a.value) / parseInt(b.value));
+            document.getElementById("result").innerText = c;
+        }
+    </script>
+</body>
+
+</html>

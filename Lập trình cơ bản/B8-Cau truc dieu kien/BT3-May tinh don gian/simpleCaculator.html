@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        width: 50px;
+        height: 50px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4" style="border: solid 1px; font-size: large;">
+                <p id="result"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber('1')">1</button></td>
+            <td>
+                <button onclick="pressNumber('2')" ">2</button></td>
+            <td><button onclick="pressNumber( '3') ">3</button></td>
+            <td><button onclick="pressOperator( '+') ">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber( '4') ">4</button></td>
+            <td><button onclick="pressNumber( '5') ">5</button></td>
+            <td><button onclick="pressNumber( '6') ">6</button></td>
+            <td><button onclick="pressOperator( '-') ">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber( '7') ">7</button></td>
+            <td><button onclick="pressNumber( '8') ">8</button></td>
+            <td><button onclick="pressNumber( '9') ">9</button></td>
+            <td><button onclick="pressOperator( '*') ">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressC() ">C</button></td>
+            <td><button onclick="pressNumber( '0') ">0</button></td>
+            <td><button onclick="presEqual() ">=</button></td>
+            <td><button onclick="pressOperator( '/') ">/</button></td>
+        </tr>
+    </table>
+    <script>
+        let result = 0;
+        let resultId = document.getElementById('result');
+        function pressNumber(num) {
+            if (resultId.innerHTML == '0') {
+                resultId.innerHTML = num;
+            } else if (result == 0) {
+                resultId.innerHTML += num;
+            } else {
+                resultId.innerHTML = num;
+                result = 0;
+            }
+        }
+        function pressOperator(operator) {
+            resultId.innerHTML += operator;
+            result = 0;
+        }
+        function pressC() {
+            resultId.innerHTML = '0';
+            result = 0;
+        }
+
+        function presEqual() {
+            result = eval(resultId.innerHTML);
+            resultId.innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

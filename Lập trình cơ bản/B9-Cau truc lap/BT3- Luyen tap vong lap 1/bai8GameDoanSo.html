@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="button" onclick="choi()" value="choi">
+    </div>
+    <script>
+        let from;
+        let to;
+        let number;
+
+        function choi() {
+            from = parseInt(prompt("Khoang doan tu: "));
+            to = parseInt(prompt("den: "));
+            let numberCom = Math.floor((Math.random() * to) + from)
+            let pass = false;
+            while (!pass) {
+                number = parseInt(prompt("Nhap vao so ban doan"));
+                if (number == numberCom) {
+                    alert("chuc mung ban da doan dung");
+                    pass = true;
+                } else {
+                    if (number < numberCom) {
+                        alert("so ban doan be hon");
+                        pass = false;
+                    } else {
+                        alert("so ban doan lon hon");
+                        pass = false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

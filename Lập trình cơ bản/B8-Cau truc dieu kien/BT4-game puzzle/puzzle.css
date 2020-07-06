@@ -1,0 +1,37 @@
+.frame {
+    margin-top: 50px;
+    width: 400px;
+    background-color: white;
+    margin-left: 100px;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    height: 80px;
+    width: 400px;
+    background-size: cover;
+    border: 2px solid blue;
+}
+
+.row1 {
+    background-image: url(image/c1.jpg);
+}
+
+.row2 {
+    background-image: url(image/a2.jpg);
+}
+
+.row3 {
+    background-image: url(image/b3.jpg);
+}
+
+.row4 {
+    background-image: url(image/a4.jpg);
+}
+
+.row5 {
+    background-image: url(image/c5.jpg);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <input name="Amount" id="amount" type="text" />
+        <select name="FromCurency" id="fromCurrecy">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+        </select>
+        <span> To </span>
+        <select name="ToCurency" id="toCurrecy">
+        <option value="usd">USD</option>
+        <option value="vnd">VND</option>
+        </select>
+        <p id="result"></p>
+        <button type="button" onclick="ExchangeMoney()" value="convert">convert</button>
+    </form>
+    <script>
+        let amount = document.getElementById("amount");
+        let fromCurrecy = document.getElementById("fromCurrecy");
+        let toCurrecy = document.getElementById("toCurrecy");
+        let result = 0;
+
+        function ExchangeMoney() {
+            if (fromCurrecy.value === "vnd" && toCurrecy.value === "usd") {
+                result = (amount.value / 25000);
+            } else if (fromCurrecy.value === "usd" && toCurrecy.value === "vnd") {
+                result = (amount.value * 25000);
+            } else {
+                result = (amount.value);
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+
+</html>

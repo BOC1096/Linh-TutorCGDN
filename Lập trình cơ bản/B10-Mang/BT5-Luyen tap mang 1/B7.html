@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //bai 7: Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+        let arrayInteger = new Array(10);
+        for (let i = 0; i < arrayInteger.length; i++) {
+            arrayInteger[i] = prompt("Please input element " + i + ": ");
+        }
+        document.write("Before: " + arrayInteger + "<br>");
+
+        let numberV = prompt("Please input V: ");
+        let posV = arrayInteger.indexOf(numberV)
+        if (posV >= 0) {
+            document.write("V is in the array <br>");
+
+            for (let i = posV; i < arrayInteger.length - 1; i++) {
+                arrayInteger[i] = arrayInteger[i + 1];
+            }
+            arrayInteger[arrayInteger.length - 1] = 0;
+        } else {
+            document.write("V is not in the array <br>");
+        }
+
+        document.write("After: " + arrayInteger + "<br>");
+    </script>
+</body>
+
+</html>

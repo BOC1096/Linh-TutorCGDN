@@ -1,0 +1,11 @@
+Các bước làm:
+Tạo repository trêm github
+Chạy các lệnh sau ở cửa sổ terminal:
+echo "# Linh-TutorCGDN" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/BOC1096/Linh-TutorCGDN.git
+git push -u origin master
+
+link git: https://github.com/BOC1096/Linh-TutorCGDN

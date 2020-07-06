@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+
+
+        let totalBills = parseFloat(prompt("Nhap vao tong so gia tri don hang: "));
+        let poundage = 0;
+
+        if (totalBills >= 500000) {
+            poundage = totalBills * 0.05;
+        } else if (totalBills >= 100000 && totalBills < 500000) {
+            poundage = totalBills * 0.03;
+        } else {
+            poundage = totalBills * 0.02;
+        }
+
+        document.write("Hoa hong: " + poundage);
+    </script>
+</body>
+
+</html>

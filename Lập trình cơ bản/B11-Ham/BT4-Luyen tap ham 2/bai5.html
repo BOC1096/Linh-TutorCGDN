@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * ham tim so nho nhat trong so nguyen nhap vao
+     * @param a
+     * @param b
+     * @param c
+     * @returns {*}
+     **/
+    function songuyen(a, b, c) {
+        let min = a;
+        if (b < min) {
+            min = b;
+        }
+        if (c < min) {
+            min = c;
+        }
+        return min;
+    }
+
+    let num1 = parseInt(prompt("enter number 1: "));
+    let num2 = parseInt(prompt("enter number 2: "));
+    let num3 = parseInt(prompt("enter number 3: "));
+    alert("number min" + songuyen(num1, num2, num3));
+</script>
+</body>
+</html>

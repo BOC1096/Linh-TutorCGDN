@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function checknumber(a) {
+    //     if (!isNaN(a))
+    //         return true;
+    //     else return false;
+    // }
+    // let num = prompt("enter number");
+    // alert(checknumber(num));
+    /**
+     * ham kiem tra ki tu nhap vao co phai 1 so
+     * @param a
+     * @returns {boolean}
+     **/
+    function checknumber(a) {
+        if (a.match(/^-{0,9}\d+$/)) {
+            return true;
+        } else if (a.match(/^\d+\.\d+$/)) {
+            return true;
+        } else return false
+    }
+
+    let num = prompt("enter number");
+    alert(checknumber(num));
+
+</script>
+</body>
+</html>

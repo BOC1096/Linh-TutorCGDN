@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 10: Viết chương trình tính giá điện
+        // Bậc 1: Cho kWh từ 0 - 50 là 1.678
+        // Bậc 2: Cho kWh từ 51 - 100 là 1.734
+        // Bậc 3: Cho kWh từ 101 - 200 là 2.014
+        // Bậc 4: Cho kWh từ 201 - 300 là 2.536
+        // Bậc 5: Cho kWh từ 301 - 400 là 2.834
+        // Bậc 6: Cho kWh từ 401 trở lên là 2.927
+
+        let kWh = parseInt(prompt("Nhap vao: "));
+        let billElectricity = 0;
+
+        if (kWh >= 0 && kWh <= 50) {
+            billElectricity = kWh * 1.678;
+        } else if (kWh >= 51 && kWh <= 100) {
+            billElectricity = kWh * 1.734;
+        } else if (kWh >= 101 && kWh <= 200) {
+            billElectricity = kWh * 2.014;
+        } else if (kWh >= 201 && kWh <= 300) {
+            billElectricity = kWh * 2.536;
+        } else if (kWh >= 301 && kWh <= 400) {
+            billElectricity = kWh * 2.834;
+        } else {
+            billElectricity = kWh * 2.927;
+        }
+
+        document.writeln("Tien dien la: " + billElectricity);
+    </script>
+</body>
+
+</html>

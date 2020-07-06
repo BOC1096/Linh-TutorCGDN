@@ -1,0 +1,18 @@
+BEGIN
+	INPUT point
+    IF point >=75 
+        DISPLAY "Grade A"
+    END IF
+    IF point >=60 and point <75
+        DISPLAY "Grade B"
+    END IF
+    IF point >=45 and point <60
+        DISPLAY "Grade C"
+    END IF
+    IF point >=35 and point <45
+        DISPLAY "Grade D"
+    END IF 
+    IF point <35
+        DISPLAY "Grade E"
+    END IF
+END
