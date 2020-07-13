@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bobScore = [];
+        let aliceScore = [];
+        alert("Nhập điểm cho Bob");
+        inputScore(bobScore);
+        alert("Nhập điểm cho Alice");
+        inputScore(aliceScore);
+        let score = [0, 0];
+        compareScore(bobScore, aliceScore);
+        alert("Tỷ số trận đấu là: Bob " + score[0] + ":" + score[1] + " Alice");
+
+        function inputScore(arr) {
+            for (let i = 0; i < 3; i++) {
+                arr[i] = parseInt(prompt("Điểm thứ " + (i + 1)));
+            }
+        }
+
+        function compareScore(arr1, arr2) {
+            for (let i = 0; i < 3; i++) {
+                if (arr1[i] > arr2[i]) {
+                    score[0] += 1
+                }
+                if (arr1[i] < arr2[i]) {
+                    score[1] += 1
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

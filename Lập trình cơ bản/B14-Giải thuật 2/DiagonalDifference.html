@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="matrix"></h3>
+    <h2 id="left_to_right_diagonal"></h2>
+    <h2 id="right_to_left_diagonal"></h2>
+    <h2 id="result"></h2>
+    <script>
+        let row = parseInt(prompt("Nhập kích thước của ma trận vuông"));
+        let matrix = new Array(row);
+        for (let i = 0; i < matrix.length; i++) {
+            matrix[i] = new Array(row);
+        }
+
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = Math.floor(Math.random() * 10);
+            }
+        }
+        let matrixInput = "";
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                matrixInput = matrixInput + " " + matrix[i][j];
+            }
+            matrixInput += "<br>";
+        }
+        document.getElementById("matrix").innerHTML = matrixInput;
+
+        //Tính tổng đường chéo từ trái sang phải
+        let left_to_right_diagonal = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (i === j) {
+                    left_to_right_diagonal += matrix[i][j];
+                }
+            }
+        }
+        document.getElementById("left_to_right_diagonal").innerHTML = "Tổng đường chéo từ trái sang phải: " + left_to_right_diagonal;
+        let right_to_left_diagonal = 0;
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (i + j === row - 1) {
+                    right_to_left_diagonal += matrix[i][j];
+                }
+            }
+        }
+        document.getElementById("right_to_left_diagonal").innerHTML = "Tổng đường chéo từ phải sang trái: " + right_to_left_diagonal;
+        document.getElementById("result").innerHTML = "Độ khác nhau là: " + Math.abs(left_to_right_diagonal - right_to_left_diagonal);
+    </script>
+</body>
+
+</html>

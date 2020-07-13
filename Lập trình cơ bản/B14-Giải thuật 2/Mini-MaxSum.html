@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(5);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Nhập giá trị cho phần tử " + (i + 1) + "của mảng"));
+        }
+        let sumMin = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let sum = 0;
+            for (let j = 0; j < arr.length; j++) {
+                if (i !== j) {
+                    sum += arr[j];
+                }
+            }
+            if (sumMin === 0 || sumMin > sum) {
+                sumMin = sum;
+            }
+            sum = 0;
+        }
+        let sumMax = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let sum = 0;
+            for (let j = 0; j < arr.length; j++) {
+                if (i !== j) {
+                    sum += arr[j];
+                }
+            }
+            if (sumMax === 0 || sumMax < sum) {
+                sumMax = sum;
+            }
+            sum = 0;
+        }
+        document.writeln("Sum Min: " + sumMin);
+        document.writeln("Sum Max: " + sumMax);
+    </script>
+</body>
+
+</html>

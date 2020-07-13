@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sam = prompt("Nhap vao s va t (s t)");
+        let appleOrange = prompt("Nhap vao a va b (a b)");
+        let count = prompt("Nhap vao m va n (m n)");
+        let countApple = 0;
+        let countOrange = 0;
+        let apple = [];
+        let orange = [];
+        let s = sam.split(" ")[0];
+        let t = sam.split(" ")[1];
+        let a = appleOrange.split(" ")[0];
+        let b = appleOrange.split(" ")[1];
+        let m = count.split(" ")[0];
+        let n = count.split(" ")[1];
+        for (let i = 0; i < parseInt(m); i++) {
+            apple[i] = parseInt(prompt("Nhập vi tri roi thu " + (i + 1) + " qua tao"));
+        }
+        for (let i = 0; i < parseInt(n); i++) {
+            orange[i] = parseInt(prompt("Nhập vi tri roi thu " + (i + 1) + " qua cam"));
+        }
+        apple.forEach(app => {
+            if (a * 1 + app >= s * 1 && a * 1 + app <= t * 1) {
+                countApple++;
+            }
+        });
+        orange.forEach(ora => {
+            if (a * 1 + ora >= s * 1 && a * 1 + ora <= t * 1) {
+                countOrange++;
+            }
+        });
+        alert(countApple);
+        alert(countOrange);
+    </script>
+</body>
+
+</html>

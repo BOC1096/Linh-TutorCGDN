@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let height_staircase = parseInt(prompt("Nhập vào chiều cao hình tam giác: "));
+        for (let i = 0; i < height_staircase; i++) {
+            for (let j = 0; j < height_staircase; j++) {
+                if (i + j < height_staircase - 1) {
+                    document.writeln("&nbsp;&nbsp");
+                } else {
+                    document.writeln("#");
+                }
+            }
+            document.writeln("<br>");
+        }
+    </script>
+</body>
+
+</html>

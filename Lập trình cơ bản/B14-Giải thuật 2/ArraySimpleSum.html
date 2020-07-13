@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let lenghtArr = parseInt(prompt("Nhập số lượng phần tử của mảng: "));
+        let arr = [];
+        for (let i = 0; i < lenghtArr; i++) {
+            arr[i] = parseInt(prompt("Nhập giá trị cho phần tử thứ " + (i + 1) + " của mảng"));
+        }
+
+        function sumArr(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        alert(sumArr(arr));
+    </script>
+</body>
+
+</html>

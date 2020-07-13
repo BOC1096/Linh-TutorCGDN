@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let time = prompt('Nhap vao thoi gian: hh:mm:ssAM');
+        let arr = time.split(":");
+        if (time.includes('AM') && arr[0] == 12) {
+            time = time.substr(2, (time.length - 4));
+            console.log(time);
+            alert('00' + time);
+        } else if (time.includes('PM') && arr[0] != 12) {
+            time = time.substr(2, (time.length - 4));
+            alert(arr[0] * 1 + 12 + time);
+        } else {
+            alert(time.substring(0, (time.length - 2)));
+        }
+    </script>
+</body>
+
+</html>

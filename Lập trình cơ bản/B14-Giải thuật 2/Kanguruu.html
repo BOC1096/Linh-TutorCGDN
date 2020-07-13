@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt('Nhap vao vi tri va toc do kanguruu (a b c d)');
+        let arr = num.split(" ");
+        let x1 = parseInt(arr[0]);
+        let v1 = parseInt(arr[1]);
+        let x2 = parseInt(arr[2]);
+        let v2 = parseInt(arr[3]);
+        let result = false;
+        // if (x2 > x1 && v2 >= v1) {
+        //     result = false;
+        // } else if (
+        //     // (x1-x2) + (v1-v2) x A =0
+        // )
+        if ((x1 - x2) % (v2 - v1) == 0 && (x1 - x2) / (v2 - v1) >= 0) {
+            result = true;
+        }
+        alert(result ? 'Yes' : 'No');
+    </script>
+</body>
+
+</html>
