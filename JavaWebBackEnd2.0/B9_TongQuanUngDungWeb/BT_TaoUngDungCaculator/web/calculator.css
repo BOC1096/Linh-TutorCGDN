@@ -1,0 +1,19 @@
+.boardCal {
+    border: 2px solid blue;
+    width: 450px;
+    margin: auto;
+    padding: 0px 20px 50px 20px;
+}
+
+.boardCal label {
+    width: 10em;
+    float: left;
+}
+
+.boardCal input {
+    margin-bottom: .5em;
+}
+
+.boardCal span {
+    margin-bottom: .5em;
+}
