@@ -23,7 +23,7 @@ public class TestMyLinkedList {
         myLinkedList.add(1,p4);
         Person p5 = new Person("Ha",24);
 //        myLinkedList.addLast(p5);
-
+        System.out.println(myLinkedList.contains(p3));
         for (int i = 0; i < myLinkedList.size(); i++){
            Person p = (Person) myLinkedList.get(i);
             System.out.println(p.name);
